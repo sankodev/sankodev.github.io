@@ -1,0 +1,102 @@
+header{text-align: center;}
+
+body{background-color: black;
+	color: white;}
+	
+	a{color: rgb(204,204,153);
+	text-decoration: none;}
+/*
+These following nav, aside, and main psuedoclasses to format the three-columns
+*/		
+nav a{color: white;
+	text-decoration: none;}
+
+nav a:hover{color: rgb(204,204,153);}
+
+nav {	float: left;
+		width: 20%;
+		
+		height: auto;
+		background-color: black;}
+		
+nav li {	list-style-type: none;
+		font-size: 2em;}
+
+aside { 	float: right; 
+        width: 20%;
+		
+		height:auto;
+		color: white;
+		}
+		
+main {	height: auto;
+		width: auto;
+		margin-left: 20%;
+		margin-right: 20%;
+		padding-right: 10px;
+		padding-left: 10px;
+		padding-top: 10px;
+		color:white;}
+/*
+Takes away the ugly dotted format for the webpage
+*/
+li{list-style-type: none;}
+
+#wrapper{
+		color: black;
+		border: 2px solid #000000;
+		background-color: black;
+		text-align:center; 
+		text-shadow: 3px 3px 3px #666; 
+		font-family: Times New Roman;}
+
+h3{background-color: black; 
+	color: white;
+	text-align: center;}
+	
+span{color: red;
+	display: inline;}
+	 
+#box { background-color: black;
+		color: white;
+        border: 3px solid #000000;
+		border-color: rgb(204,204,153);
+		text-align: center; 
+		margin-left: 570px; 
+		margin-right: 570px;
+		margin-bottom: 300px;}
+		
+.middlediddle{
+		text-align: center; 
+		margin-left: 570px; 
+		margin-right: 570px;
+		margin-bottom: 300px;}
+
+
+/*
+script refering to js from dynamic drive site for carousel image function
+*/
+<style type="text/css">
+
+.stepcarousel{
+position: relative; /*leave this value alone*/
+border: 20px solid navy;
+overflow: scroll; /*leave this value alone*/
+width: 280px;
+height: 200px; /*Height should enough to fit largest content's height*/
+}
+
+.stepcarousel .belt{
+position: absolute; /*leave this value alone*/
+left: 0;
+top: 0;
+}
+
+.stepcarousel .panel{
+float: left; /*leave this value alone*/
+overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+margin: 15px; /*margin around each panel*/
+width: 250px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+}
+
+</style>

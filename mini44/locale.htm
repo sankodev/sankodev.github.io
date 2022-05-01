@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+		<!--This will serve as the favicon-->
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <title>VodWhisTon</title>
+		
+		<!--author: Kaleb Sandin-->
+		<!--date created: March 15, 2016-->
+		<!--date edited: April 8, 2016-->
+		<!--This is to be utilized as a landingpage for a mini project #3 in ITS227-->
+		
+		<meta name="description" content="VWT straight up serve the best times to our guests;
+		mixing indulgent ingredients of favorite vegan dishes with hard Irish cultured whiskey and Russian infused Vodka flavors. All patrons must
+		be over 21 to be served.">
+		
+		<!--embedded style-->
+		<link rel="stylesheet" href="vwt.css">
+		
+		<style>
+        .sig-drink {
+            background: rgb(237, 28, 0);
+        }
+       
+        .hartley-fav {
+            background: rgb(237, 28, 0);
+			color: rgb(237, 28, 0);
+			
+		.right-answer {
+            background: rgb(237, 28, 0);
+			color: rgb(237, 28, 0);
+        }
+       
+        .wrong-answer {
+            background: rgb(237, 28, 0);
+        }
+        }
+        </style>
+    </head>
+    <body>
+	
+	<header role="banner">
+	<h1 style="background-color: black; color: white; font-size: 3em;">Vodka Whiskey Tonic&copy;</h1>
+	
+</header>		
+		
+	<nav style="background-color: black; color: white;">
+		
+		
+		<li><img src="oldfashioned.png" alt="wbg logo" height="100px" width="100px"><a href="trial.htm"><i>VWT</i></a> 
+		<br>
+		<li><img src="manhattanicon.png" alt="wbg logo" height="100px" width="100px"><a href="drinks.htm"><i>Drinks</i></a>
+		<br>
+		<li><img src="whiskeysour.png" alt="wbg logo" height="100px" width="100px"><a href="mixers.htm"><i>Mixers</i></a>
+		<br>
+		<li><img src="cranvodkaicon.png" alt="wbg logo" height="100px" width="100px"><a href="locale.htm"><i>Locale</i></a>
+		<br>
+		
+		
+
+	</nav>
+		<!--This is my main focal-point for the first 10 seconds to draw in my audience with 
+			beautiful imagery and introduce curiosity to those who even may not be within the 
+			direct target market-->
+		
+		
+		
+		<aside>
+		<h4>Welcome Our New Share-Holder</h4>
+		
+		<img src="hartley.jpg" alt="hartley" width="252" height="273">
+		<br><br>
+		<img src="hartleystanleycup.jpg" alt="raise the cup" width="255" height="167">
+		
+		
+		</aside>
+		
+		<main>
+		
+		<div style="text-align: center">
+		<h3>Our Alberta Family
+		<br>and Home to the <span>Calgary Flames</span></h3>
+		<img src="flamesc2.png" alt="calgary c" width="110" height="85"> 	
+		</div>
+		<br>
+		<!--this is where i finally got the javascript to work-->
+		<table>
+        <thead>
+            <tr>
+                <th>Flames' Season</th>
+                <th>Game Night</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <ul>
+                    <li>Gaudreau Nets a Hat Trick in the month of October</li>
+                    <li>Half-off Drink Specials</li>
+                </ul>
+            </td>
+            <td>
+                <img src="neaticon.png" id="avatar-1" alt="neat">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Local Farmers Join</li>
+                    <li>Grab a Bourbon Lemonade with Kari Ramo</li>
+                </ul>
+            </td>
+            <td>
+                <img src="lemonade.png" id="avatar-2" alt="lemonade">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Vegan No-Meat Mondays</li>
+                    <li>Bennet displays his kitchen nutrition knowledge</li>
+                </ul>
+            </td>
+            <td>
+                <img src="parsley.png" id="avatar-3" alt="parsley">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+		</main>
+		
+	
+	
+	<footer>
+		<br>
+		<br>
+		
+		<!--to insert an email link into the text, code "mailto:" within an "a href" tag with the following appropriate email credentials-->
+		<!--to enable a default subject line to the user email, input "subject=" following the mailto: link-->
+		<p style="text-align: center">
+		Vodka Whiskey Tonic &copy; 2016<br>
+		Scotiabank Saddledrome, Studio 7<br>
+		Calgary, Alberta CA <br>
+		<a href="mailto:sandin7@hawaii.edu?subject= WBG Drinks"><em>contact@whibourgarn.com</em></a>
+		</p>
+	</footer>
+	
+		<!--using this script to manipulate the attributes of the ID names-->
+        <script>
+		var avatarEls = document.getElementsById("avatar-1");
+		for (var i = 0; i < avatarEls.length; i++){avatarEls[i].height = "75";
+		avatarEls[i].title = avatarEls[i].alt;
+		}
+        </script>
+   
+    </body>
+</html>

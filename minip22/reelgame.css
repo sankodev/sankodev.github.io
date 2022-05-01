@@ -1,0 +1,252 @@
+/*
+To create more visibility for hovering over links,
+While sticking to the earthy, and cautionary color schema
+by biking & motocross color tones
+*/
+a:hover{background-color:white; display:inline; color:rgb(153,0,0);}
+
+/*
+This anchor attribute will make the text color for links appear as white text color, in order to contrast better display with the darker colored backgrounds
+*/
+A{color:green}
+a, u{text-decoration: none;}
+
+a:active{color:rgb(153,0,0);}
+
+/*
+Using the alignright, left, and center classes, I created float attributes
+to allow multiple content to level on the same line in the body
+*/
+
+.alignright{float: right;}
+.alignleft{float: left;}
+.aligncenter{float: center;}
+
+/*
+An updated new class for float that adds additional custom appearance
+*/
+.chartleft{float: left;
+			}
+			
+.chartright{float: right;
+			}
+			
+#border{border-color: white;
+		border: 2px solid #000000;
+		border-radius: 165px;
+		background-color: rgb(153,0,0);
+		text-shadow: 3px 3px 3px #333; 
+		color: white;
+		width: 40%;
+		text-align: center;
+		}			
+
+#wrappernav{
+		color: rgb(255,255,255);
+		width: 19.5%;
+		height: 100%;
+		margin: auto;
+		min-width:auto;
+		border: 2px solid #000000;
+		border-color: rgb(255,255,255);
+		background-image: url(wooddock.jpg);
+		background-repeat: repeat-y;
+		background-color: white;
+		}
+		
+#wrappersnapper{
+		color: rgb(255,255,255);
+		width: 560px;
+		height: 100%;
+		margin: auto;
+		min-width:auto;
+		border: 2px solid #000000;
+		border-color: rgb(255,255,255);
+		background-image: url(woodenboard.jpg);
+		background-repeat: repeat-x;
+		background-color: white;
+		text-align: center;
+		}
+		
+#centerwrapper{
+		color: rgb(255,255,255);
+		width: 50%;
+		height: 100%;
+		margin-left: 330px;
+		border: 2px solid #000000;
+		border-color: rgb(255,255,255);
+		background-image: url(woodenboard.jpg);
+		background-repeat: repeat-x;
+		background-color: white;
+		text-align: center;
+		}
+		
+/*
+This will keep the navigation bar fixed on screen
+while scrolling through the web page.
+*/
+
+/*
+this wrapper is used to configure the navigation bar
+*/
+#wrapper{
+		color: rgb(153,0,0);
+		text-shadow: 3px 3px 3px #333; 
+		font-size:2em;
+		height: 40%;
+		width: 100%;
+		margin: auto;
+		min-width:auto;
+		border: 2px solid #000000;
+		border-color: rgb(255,255,255);
+		background-image: url(wooddock.jpg);
+		background-repeat: repeat-x;
+		background-position: 100%;
+		background-color: rgb(0,0,0);
+		text-align: center;}
+		
+
+/*
+This code will serve to further configure my navigation bar
+*/
+#navbar{background-image: url(wooddock.jpg); 
+		color:white; text-align:center; 
+		text-shadow: 3px 3px 3px #777; 
+		font-size:1em; 
+		width: 100%;
+		margin: auto;
+		min-width:auto;
+		text-align: center;
+		font-family: sans-serif, lucida sans unicode;
+		}
+
+
+
+#tabs{background-color: background-color:rgb(0,51,255);
+		color: white;
+		width: 100%;
+		margin: auto;
+		min-width:950px;
+		border: 5px solid #000000;
+		border-color: white;}
+		
+
+		
+	   
+#box { background-color: #white;
+        border: 3px solid #000000;
+		border-color: rgb(153,0,0);
+}
+
+#outdoors{color: white;
+		background-image: url(wooddock.jpg);
+		border: 2px solid #222222;}
+#reals{color: white;
+		background-image: url(wooddock.jpg);
+		border: 2px solid #222222;}
+#storage{color: white;
+		background-image: url(wooddock.jpg);
+		border: 2px solid #222222;
+		padding: 10px;}
+	
+
+	
+/*
+Pseudo-class code for H1 headers
+*/	
+h1{font-size: 2em; 
+font-family: Mr Bedford, Cursive; 
+
+font-style: normal;
+font-variant: normal;
+line-height: 26.4px;
+font-weight: 300; 
+color: rgb(153,0,0); 
+text-align: center;}
+
+/*
+Pseudo-class code for H3 headers to change appearance in caption size
+*/	
+h3{font-size: 1em; color: rgb(255,255,255);}		
+		
+/*
+These psuedo-classese will apply attributes to the body of my site throughout my build
+*/
+
+	
+footer{color: white;}
+
+/*
+This will unsolidify the form and make it more appealing in my opinion
+*/
+form{opacity: 0.75;}
+
+/*
+this is the figure and figcaption styling for my fishing gear table
+*/	
+figure{width: 400px;
+		height: 200px;
+		border: 2px solid #000000;
+		padding: 10px;
+		background-image: url(wooddock.jpg);
+		background-color: rgb(153,0,0);
+		color: white;}
+		
+figcaption{text-align: center;
+		font-family: Times New Roman;}
+
+#fishchart{width: 200px;
+			height: 200px;
+			background-color: white;
+			border: 3px dashed #000000;
+			padding: 5px;}
+			
+#fishindex{width: 175px;
+			height: 125px;
+			background-image: url(wooddock.jpg);
+			border: 3px ridge #000000;
+			padding: 10px;}
+			
+/*
+This group of IDs can better provide a more ideal appeal for the web user
+I use this group of IDs towards my Guides section where the images only take
+ up more realestate when the user is interested
+*/			
+#guide { position: relative; }
+
+#guide ul { width: 250px; 
+			  list-style-type: none; }
+			  
+#guide li { display: inline-block; 
+			  padding: 10px; }
+			  
+#guide img { border-style: none; }
+
+#guide a { text-decoration: none; 
+			 color: #333; 
+			 font-style: italic; }
+			 
+#guide span { display: none; }   
+ 
+#guide a:hover span { display: block; 
+						position: absolute;
+						top: 10px; 
+						left: 300px; 
+						text-align: center; }
+						
+/*
+Used for the form section
+*/						
+form { background-color:#eaeaea;
+	font-family: Arial, sans-serif;
+    padding: 10px;
+    min-width: 400px;	}
+label { float: left;
+	width: 150px; 
+	clear: left;
+	text-align: right; 
+	padding-right: 10px;
+	margin-top: 10px; }
+input, textarea { margin-top: 10px; 
+                  display: block;} 
+#mySubmit { margin-left: 160px; }

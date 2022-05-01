@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+		<!--This will serve as the favicon-->
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <title>VodWhisTon</title>
+		
+		<!--author: Kaleb Sandin-->
+		<!--date created: March 15, 2016-->
+		<!--date edited: April 8, 2016-->
+		<!--This is to be utilized as a landingpage for a mini project #3 in ITS227-->
+		
+		<meta name="description" content="VWT straight up serve the best times to our guests;
+		mixing indulgent ingredients of favorite vegan dishes with hard Irish cultured whiskey and Russian infused Vodka flavors. All patrons must
+		be over 21 to be served.">
+		
+		<!--embedded style-->
+		<link rel="stylesheet" href="vwt.css">
+		
+		<!--https://www.iconfinder.com/icons/465066/alcohol_bar_beverage_drink_lifestyle_straw_wine_icon#size=24-->
+		<!--This is the web link to the cursor ico download and user site-->
+		<!--https://www.iconfinder.com/HEVNgrafix-->
+		<!--using this reference from DynamicDrive will modify my mouse cursor appearance on the webpage-->
+		
+		
+
+		<style>
+.jc{
+position:relative;
+}
+</style>
+
+<script language="JavaScript1.2">
+
+//Trembling message script- (c) Dynamic Drive (www.dynamicdrive.com)
+//For full source code, 100's more DHTML scripts, and TOS,
+//visit http://www.dynamicdrive.com
+
+var ns6=document.getElementById&&!document.all
+var ie=document.all
+
+var customcollect=new Array()
+var i=0
+
+function jiggleit(num){
+if ((!document.all&&!document.getElementById)) return;
+customcollect[num].style.left=(parseInt(customcollect[num].style.left)==-1)? customcollect[num].style.left=1 : customcollect[num].style.left=-1
+}
+
+function init(){
+if (ie){
+while (eval("document.all.jiggle"+i)!=null){
+customcollect[i]= eval("document.all.jiggle"+i)
+i++
+} 
+}
+else if (ns6){
+while (document.getElementById("jiggle"+i)!=null){
+customcollect[i]= document.getElementById("jiggle"+i)
+i++
+}
+}
+
+if (customcollect.length==1)
+setInterval("jiggleit(0)",80)
+else if (customcollect.length>1)
+for (y=0;y<customcollect.length;y++){
+var tempvariable='setInterval("jiggleit('+y+')",'+'100)'
+eval(tempvariable)
+}
+}
+
+window.onload=init
+
+</script>
+    </head>
+    <body>
+	
+	<header role="banner">
+	<h1 style="background-color: black; color: white; font-size: 3em;">Vodka Whiskey Tonic&copy;</h1>
+	
+</header>		
+		
+	<nav style="background-color: black; color: white;">
+		
+		
+		<li><img src="oldfashioned.png" alt="wbg logo" height="100px" width="100px"><a href="trial.htm"><i>VWT</i></a> 
+		<br>
+		<li><img src="manhattanicon.png" alt="wbg logo" height="100px" width="100px"><a href="drinks.htm"><i>Drinks</i></a>
+		<br>
+		<li><img src="whiskeysour.png" alt="wbg logo" height="100px" width="100px"><a href="mixers.htm"><i>Mixers</i></a>
+		<br>
+		<li><img src="cranvodkaicon.png" alt="wbg logo" height="100px" width="100px"><a href="locale.htm"><i>Locale</i></a>
+		<br>		
+
+	</nav>
+		<!--This is my main focal-point for the first 10 seconds to draw in my audience with 
+			beautiful imagery and introduce curiosity to those who even may not be within the 
+			direct target market-->
+		
+		
+		
+		<aside>
+		<h4>Welcome Our New Share-Holder</h4>
+		
+		<img src="hartley.jpg" alt="hartley" width="252" height="273">
+		<br><br>
+		<img src="hartleystanleycup.jpg" alt="raise the cup" width="255" height="167">
+		
+		
+		</aside>
+		
+		<main>
+		
+		<div style="text-align: center">
+		<h3>Our Alberta Family
+		<br>and Home to the <span>Calgary Flames</span></h3>
+		<img src="flamesc2.png" alt="calgary c" width="110" height="85"> 	
+		</div>
+		<blockquote>
+		We believe that whiskey builds rich culture, holds a warm hearty compassion in a drink, and we pride ourselves on presenting our family distilled
+		whiskey &amp; Vodka mixes to the great city of Calgary. VWT dishes re-introduce a home-styled savory taste to Canadian roots.
+		Located next to the Scotiabank Saddledrome Arena, we welcome the Flames' family into our home. Exclusive part-owner and Flames' headcoach,
+		Bob Hartley, approached us on openening week and is now a proud share-holder to VWT. A taste of the gritty back-woods city
+		with a drop of liquor awaits your postgame nights.
+		</blockquote>
+		<br><br>
+		
+		<!--this is where i finally got the javascript to work-->
+		<div style="text-align: center">
+		<h1>Vodka Whiskey Tonic</h1>
+
+		<p>The uniform color is:
+        <span id="color">?</span>
+		</p>
+   
+		<p>Our partial stake-holder:
+        <span id="name">?</span>
+		</p>
+   
+		<p>The company stake-holder's team:
+        <br>
+        <img id="team" src="flamesc.png" alt="flames logo">
+		</p>
+		</div>
+		<!--This is the script borrowed from Dynamic Dtive to put
+		the tremble effect on my spanned text-->
+		<div style="text-align: center">
+		<span id="jiggle0" class="jc">
+		<b>GO FLAMES GO! <a href="http://flames.nhl.com/">Flames Team Site</a></b>
+		</span>
+		</div>
+		</main>
+		
+	
+	
+	<footer>
+		<br>
+		<br>
+		
+		<!--to insert an email link into the text, code "mailto:" within an "a href" tag with the following appropriate email credentials-->
+		<!--to enable a default subject line to the user email, input "subject=" following the mailto: link-->
+		<p style="text-align: center">
+		Vodka Whiskey Tonic &copy; 2016<br>
+		Scotiabank Saddledrome, Studio 7<br>
+		Calgary, Alberta CA <br>
+		<a href="mailto:sandin7@hawaii.edu?subject= WBG Drinks"> <em>contact@whibourgarn.com</em></a>
+		</p>
+	</footer>
+	<!--starting off with various elements being called in for modification to the page-->
+    <script>
+    var colorEl = document.getElementById("color");
+    var nameEl  = document.getElementById("name");
+    var teamEl = document.getElementById("team");
+    colorEl.innerHTML = "red";
+    colorEl.style.color = "red";
+    nameEl.innerHTML = "Bob Hartley";
+    nameEl.style.fontFamily="cursive";
+   
+    teamEl.style.border = "2px solid red";
+
+		//Trembling message script- (c) Dynamic Drive (www.dynamicdrive.com)
+		//For full source code, 100's more DHTML scripts, and TOS,
+		//visit http://www.dynamicdrive.com
+
+		var ns6=document.getElementById&&!document.all
+		var ie=document.all
+
+		var customcollect=new Array()
+		var i=0
+
+		function jiggleit(num){
+		if ((!document.all&&!document.getElementById)) return;
+		customcollect[num].style.left=(parseInt(customcollect[num].style.left)==-1)? customcollect[num].style.left=1 : customcollect[num].style.left=-1
+		}
+
+		function init(){
+		if (ie){
+		while (eval("document.all.jiggle"+i)!=null){
+		customcollect[i]= eval("document.all.jiggle"+i)
+		i++
+		} 
+		}
+		else if (ns6){
+		while (document.getElementById("jiggle"+i)!=null){
+		customcollect[i]= document.getElementById("jiggle"+i)
+		i++
+		}
+		}
+
+		if (customcollect.length==1)
+		setInterval("jiggleit(0)",80)
+		else if (customcollect.length>1)
+		for (y=0;y<customcollect.length;y++){
+		var tempvariable='setInterval("jiggleit('+y+')",'+'100)'
+		eval(tempvariable)
+		}
+		}
+
+		window.onload=init
+
+	</script>
+   
+    </body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Glass Down Calgary &copy;</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+	<!--author: Kaleb Sandin-->
+		<!--date created: April 12, 2016-->
+		<!--date edited: April 13, 2016-->
+		<!--This is to be utilized as jQuery Mobile for a mini project #4 in ITS227-->
+	<!--embedded style-->
+		<link rel="stylesheet" href="vwt.css">
+		
+	<style>
+		img.fullscreen{
+						max-height: 50%;
+						max-width: 50%;}
+						
+		.sig-drink {
+            background: rgb(237, 28, 0);
+			color: white;
+        }
+       
+        .hartley-fav {
+            background: rgb(237, 204, 0);
+			color: rgb(237, 28, 0);}
+	</style>
+</head>
+<body>
+<div data-role="page" id="first">
+
+<header data-role="header">
+	<h1>Glass Down Calgary &copy;</h1>
+</header>
+
+<article data-role="content">
+	<ul data-role="listview" data-filter="true">
+	<li>
+	<a href="#family">
+	
+	<img src="oldfashioned.png" alt="drinks">
+	<h1>Family</h1>
+	<p>Welcome to our Calgary Heritage</p></a>
+	</li>
+	<li>
+	<a href="#drinks">
+	
+	<img src="manhattanicon.png" alt="drinks">
+	<h1>Drinks</h1>
+	<p>Hartley's favorites
+	and local signature mixes</p></a>
+	</li>
+	<li>
+	<a href="#mixers">
+	
+	<img src="whiskeysour.png" alt="drinks">
+	<h1>Mixers</h1>
+	<p>Our new share-holder and upcoming Flames events</p></a>
+	</li>
+	<li>
+	<a href="#locale">
+	
+	<img src="cranvodkaicon.png" alt="drinks">
+	<h1>Locale</h1>
+	<p>Our Alberta community</p></a>
+	</li>
+	</ul>
+</article>
+
+<footer data-role="footer" data-position="fixed">
+	<nav data-role="navbar">
+		<ul>
+			<li><a href="#first" data-icon="home">Home</a></li>
+			<li><a href="#photos" data-icon="grid">Photos</a></li>
+			<li><a href="#info" data-icon="info">Info</a></li>
+			<li><a href="#contact" data-icon="phone">Contact</a></li>
+		</ul>
+	</nav>
+</footer>
+</div> <!--end of page-->
+
+<!--family page-->
+<div data-role="page" id="family" style="background-color: black">
+
+<header data-role="header" data-position="fixed">
+	<h1>Family</h1>
+	<a href="#first">Home</a>
+</header>
+<main>
+		
+		<div style="text-align: center">
+		<h3>Our Alberta Family
+		<br>and Home to the <span>Calgary Flames</span></h3>
+		<img src="flamesc2.png" alt="calgary c" width="110" height="85"> 	
+		</div>
+		<blockquote>
+		We believe that whiskey builds rich culture, holds a warm hearty compassion in a drink, and we pride ourselves on presenting our family distilled
+		whiskey &amp; Vodka mixes to the great city of Calgary. VWT dishes re-introduce a home-styled savory taste to Canadian roots.
+		Located next to the Scotiabank Saddledrome Arena, we welcome the Flames' family into our home. Exclusive part-owner and Flames' headcoach,
+		Bob Hartley, approached us on openening week and is now a proud share-holder to VWT. A taste of the gritty back-woods city
+		with a drop of liquor awaits your postgame nights.
+		</blockquote>
+		<br><br>
+		
+		<!--this is where i finally got the javascript to work-->
+		<div style="text-align: center">
+		<h1>Vodka Whiskey Tonic</h1>
+
+		<p>The uniform color is:
+        <span id="color">?</span>
+		</p>
+   
+		<p>Our partial stake-holder:
+        <span id="name">?</span>
+		</p>
+   
+		<p>The company stake-holder's team:
+        <br>
+        <img id="team" src="flamesc.png" alt="flames logo">
+		</p>
+		</div>
+		<!--This is the script borrowed from Dynamic Dtive to put
+		the tremble effect on my spanned text-->
+		<div style="text-align: center">
+		<span id="jiggle0" class="jc">
+		<b>GO FLAMES GO!</b>
+		<br>
+		 <a href="http://flames.nhl.com/">Flames' Team Site</a>
+		</span>
+		</div>
+		</main>
+
+	<footer>
+		<br>
+		<br>
+		
+		<!--to insert an email link into the text, code "mailto:" within an "a href" tag with the following appropriate email credentials-->
+		<!--to enable a default subject line to the user email, input "subject=" following the mailto: link-->
+		<p style="text-align: center">
+		Glass Down Calgary &copy; 2016<br>
+		Scotiabank Saddledrome, Studio 7<br>
+		Calgary, Alberta CA <br>
+		<a href="mailto:sandin7@hawaii.edu?subject= Calgary Drinks"> <em>contact@glassdown.com</em></a>
+		</p>
+	</footer>
+	<!--starting off with various elements being called in for modification to the page-->
+    <script>
+    var colorEl = document.getElementById("color");
+    var nameEl  = document.getElementById("name");
+    var teamEl = document.getElementById("team");
+    colorEl.innerHTML = "red";
+    colorEl.style.color = "red";
+    nameEl.innerHTML = "Bob Hartley";
+    nameEl.style.fontFamily="cursive";
+   
+    teamEl.style.border = "2px solid red";
+
+		//Trembling message script- (c) Dynamic Drive (www.dynamicdrive.com)
+		//For full source code, 100's more DHTML scripts, and TOS,
+		//visit http://www.dynamicdrive.com
+
+		var ns6=document.getElementById&&!document.all
+		var ie=document.all
+
+		var customcollect=new Array()
+		var i=0
+
+		function jiggleit(num){
+		if ((!document.all&&!document.getElementById)) return;
+		customcollect[num].style.left=(parseInt(customcollect[num].style.left)==-1)? customcollect[num].style.left=1 : customcollect[num].style.left=-1
+		}
+
+		function init(){
+		if (ie){
+		while (eval("document.all.jiggle"+i)!=null){
+		customcollect[i]= eval("document.all.jiggle"+i)
+		i++
+		} 
+		}
+		else if (ns6){
+		while (document.getElementById("jiggle"+i)!=null){
+		customcollect[i]= document.getElementById("jiggle"+i)
+		i++
+		}
+		}
+
+		if (customcollect.length==1)
+		setInterval("jiggleit(0)",80)
+		else if (customcollect.length>1)
+		for (y=0;y<customcollect.length;y++){
+		var tempvariable='setInterval("jiggleit('+y+')",'+'100)'
+		eval(tempvariable)
+		}
+		}
+
+		window.onload=init
+
+	</script>
+</div> <!--end of page-->
+
+<!--drinks page-->
+<div data-role="page" id="drinks" style="background-color: black">
+
+<header data-role="header" data-position="fixed">
+	<h1>Drinks</h1>
+	<a href="#first">Home</a>
+</header>
+<main style="text-align: center">
+		
+		<div style="text-align: center">
+		<h3>Our Alberta Family
+		<br>and Home to the <span>Calgary Flames</span></h3>
+		<img src="flamesc2.png" alt="calgary c" width="110" height="85"> 	
+		</div>
+		
+		<!--this is where i finally got the javascript to work-->
+		<h2>Drinks</h2>
+       
+        
+       
+			<p>What lights your Flame?
+			<br><span class="hartley-fav">Hartley's Favorites</span>
+			<br><span class="sig-drink">Local Signatures</span></p>
+			<ul id="drinks">
+            <li>Smokey Monahan Manhattan ..... 7</li>
+            <li>Ortio's Rookie Season Vodka Cranberry ..... 6</li>
+            <li>Playoff Clincher Old Fashioned ..... 9</li>
+			<li>Hartley's Neat Powerplay ..... 5</li>
+            <li>Heritage Classic ..... 8</li>
+            <li>Whiskey Sour Penalty Kill ..... 8</li>
+        </ul>
+		<!--second usage of Dynamic Drive's js for a neon text effect-->
+		<h2>
+<script language="JavaScript1.2">
+
+/*
+Neon Lights Text
+By JavaScript Kit (http://javascriptkit.com)
+For this script, TOS, and 100s more DHTML scripts,
+Visit http://www.dynamicdrive.com
+*/
+
+var message="Flames make Playoffs!"
+var neonbasecolor="yellow"
+var neontextcolor="red"
+var flashspeed=100  //in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+//eval("document.all.neonlight"+m).style.color=neonbasecolor
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",1500)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script>
+</h2>
+
+		</main>
+	
+	<footer>
+		
+		<!--to insert an email link into the text, code "mailto:" within an "a href" tag with the following appropriate email credentials-->
+		<!--to enable a default subject line to the user email, input "subject=" following the mailto: link-->
+		<center><p>
+		Vodka Whiskey Tonic &copy; 2016<br>
+		Scotiabank Saddledrome, Studio 7<br>
+		Calgary, Alberta CA <br>
+		<a href="mailto:sandin7@hawaii.edu?subject= WBG Drinks"> <em>contact@whibourgarn.com</em></a>
+		</p>
+	</footer>
+		<!--used the script to modify the drink titles to categorize them;
+		however, I ended up just alternating the collors to make a stripe pattern with the 
+		team's colors-->
+		<script>
+         var drinks = document.querySelectorAll('#drinks li');
+        var hartleyFav = drinks[0];
+        var sigDrink1 = drinks[1];
+        var hartleyFav2 = drinks[2];
+		var sigDrink2 = drinks[3];
+        var hartleyFav3 = drinks[4];
+        var sigDrink3 = drinks[5];
+        hartleyFav.className = "hartley-fav";
+        hartleyFav2.className = "hartley-fav";
+        sigDrink1.className = "sig-drink";
+		hartleyFav3.className = "hartley-fav";
+        sigDrink3.className = "sig-drink";
+        sigDrink2.className = "sig-drink";
+        </script>
+
+</div> <!--end of page-->
+
+<!--mixers page-->
+<div data-role="page" id="mixers" style="background-color: black">
+
+<header data-role="header" data-position="fixed">
+	<h1>Mixers</h1>
+	<a href="#first">Home</a>
+</header>
+<aside>
+		<h4>Welcome Our New Share-Holder</h4>
+		
+		<img src="hartley.jpg" alt="hartley" width="252" height="273">
+		<br><br>
+		<img src="hartleystanleycup.jpg" alt="raise the cup" width="255" height="167">
+		
+		
+		</aside>
+		
+		<main>
+		
+		<div style="text-align: center">
+		<h3>Our Alberta Family
+		<br>and Home to the <span>Calgary Flames</span></h3>
+		<img src="flamesc2.png" alt="calgary c" width="110" height="85"> 	
+		</div>
+		<br>
+		<!--this is where i finally got the javascript to work-->
+		
+		<p>We had to ask the boys at Vodka Whiskey Tonic, what drives them everyday to distill world-class liquor in our subzero city...</p>
+		<p id="vwtguys"></p>
+		<br>
+        <p>"Bob, being the headcoach to this young team in the NHL and Hall of Famer, what drew you towards VWT and the fine liquor business in general?"</p>
+        <br>
+		<em><p id="hartley"></p></em>
+		</main>
+		
+	
+	
+	<footer>
+		<br>
+		<br>
+		
+		<!--to insert an email link into the text, code "mailto:" within an "a href" tag with the following appropriate email credentials-->
+		<!--to enable a default subject line to the user email, input "subject=" following the mailto: link-->
+		<p style="text-align: center">
+		Vodka Whiskey Tonic &copy; 2016<br>
+		Scotiabank Saddledrome, Studio 7<br>
+		Calgary, Alberta CA <br>
+		<a href="mailto:sandin7@hawaii.edu?subject= WBG Drinks"> <em>contact@whibourgarn.com</em></a>
+		</p>
+	</footer>
+		<!--I used the script to dictate a commentary with innerHTML and textContent variables-->
+		<script>
+            var vwtguys = document.getElementById("vwtguys");
+            vwtguys.innerHTML = "<em>It's a high level of craftsmanship put into our quality. When we first presented our selection to the Flames owner and staff, we really wanted that wow factor that we could provide for the city. Through this we introduced a whole new styling to our rich heritage of Canadian pasttime roots.</em>";
+            var hartley = document.getElementById("hartley");
+            hartley.textContent = "Well, the great thing about a nice cocktail and dining is the effect that it has to gather people and build rich culture from within. We are in the great city of Calgary, celebrating our culture and heritage through local brewers and trades businesses to our community. There's a showmanship atmosphere when you welcome the authenicity of a local business with creativity and originality. I hold high hope that the boys behind Vodka Whiskey Tonic can put Calgary on the map in an iconic style.";
+        </script>
+
+</div> <!--end of page-->
+
+<!--locale page-->
+<div data-role="page" id="locale" style="background-color: black">
+
+<header data-role="header" data-position="fixed">
+	<h1>Locale</h1>
+	<a href="#first">Home</a>
+</header>
+
+		<main>
+		<div style="text-align: center">
+		<h3>Our Alberta Family
+		<br>and Home to the <span>Calgary Flames</span></h3>
+		<img src="flamesc2.png" alt="calgary c" width="110" height="85"> 	
+		</div>
+		<br>
+		<!--this is where i finally got the javascript to work-->
+		<table>
+        <thead>
+            <tr>
+                <th>Post-Game Night</th>
+                <th> </th>
+				<th>Community Ties</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                
+                    <li>Gaudreau Nets a Hat Trick in October</li>
+                    
+                
+            </td> &nbsp;
+            <td>
+                <img src="neaticon.png" id="avatar-1" alt="neat" height="60px" width="60px">
+            </td> &nbsp;
+			<td>
+				<li>Half-off Drink Specials</li>
+			</td>
+			
+			
+        </tr> 
+        <tr>
+            <td>
+                
+                    <li>Michael Ferland Works with Us Behind the Bar for a Night</li>
+                    
+                
+            </td> &nbsp;
+            <td>
+                <img src="lemonade.png" id="avatar-2" alt="lemonade" height="125px" width="100px">
+            </td> &nbsp;
+			<td>
+				<li>Grab a Bourbon Lemonade with Kari Ramo</li>
+			</td>
+			
+			
+        </tr>
+        <tr>
+            <td>
+                
+                    <li>Rookie Defenseman Jokipaaka's Vegan No-Meat Mondays</li>
+                    
+                
+            </td> &nbsp;
+            <td>
+                <img src="parsley.png" id="avatar-3" alt="parsley" height="75px" width="75px">
+            </td> &nbsp;
+			<td>
+			<li>Bennett Dishess His Kitchen Nutrition Skills</li>
+			</td>
+			
+        </tr>
+        </tbody>
+    </table>
+	</main>	
+
+	<footer>
+		<br>
+		<br>
+		
+		<!--to insert an email link into the text, code "mailto:" within an "a href" tag with the following appropriate email credentials-->
+		<!--to enable a default subject line to the user email, input "subject=" following the mailto: link-->
+		<p style="text-align: center">
+		Vodka Whiskey Tonic &copy; 2016<br>
+		Scotiabank Saddledrome, Studio 7<br>
+		Calgary, Alberta CA <br>
+		<a href="mailto:sandin7@hawaii.edu?subject= WBG Drinks"><em>contact@whibourgarn.com</em></a>
+		</p>
+	</footer>
+
+</div> <!--end of page-->
+
+
+<!--the bottom tab pages-->
+<!--locale page-->
+<div data-role="page" id="photos" style="background-color: black">
+
+<header data-role="header" data-position="fixed">
+	<h1>Photo Gallery</h1>
+	<a href="#first">Home</a>
+</header>
+
+		
+		
+		<!--this is where i finally got the javascript to work-->
+		<table>
+        <thead>
+            <tr>
+                <img src="flamesc2.png" alt="calgary c" width="110" height="85">
+                
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <img src="cafebar.jpg" id="avatar-1" alt="cafe" height="300" width="400">
+            </td> &nbsp;
+            <td>
+                <img src="withthelocals.jpg" id="avatar-1" alt="locals" height="300" width="400">
+            </td> &nbsp;
+			<td>
+                <img src="calgarylocals.jpg" id="avatar-1" alt="locals" height="300" width="400">
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <img src="localdirector.jpg" id="avatar-1" alt="director" height="300" width="400">
+            </td> &nbsp;
+            <td>
+                <img src="calgarycrowd.jpg" id="avatar-1" alt="crowd" height="300" width="400">
+            </td> &nbsp;
+			<td>
+                <img src="calgaryfoodies.jpg" id="avatar-1" alt="foodies" height="300" width="400">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="calgaryhorses.jpg" id="avatar-1" alt="horses" height="300" width="400">
+            </td> &nbsp;
+            <td>
+                <img src="blueberries.jpg" id="avatar-1" alt="blueberries" height="300" width="400">
+            </td> &nbsp;
+			<td>
+                <img src="goaliegillies.jpg" id="avatar-1" alt="goalie" height="300" width="400">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+		
+
+	<footer>
+		<br>
+		<br>
+		
+		<!--to insert an email link into the text, code "mailto:" within an "a href" tag with the following appropriate email credentials-->
+		<!--to enable a default subject line to the user email, input "subject=" following the mailto: link-->
+		<p style="text-align: center">
+		Vodka Whiskey Tonic &copy; 2016<br>
+		Scotiabank Saddledrome, Studio 7<br>
+		Calgary, Alberta CA <br>
+		<a href="mailto:sandin7@hawaii.edu?subject= WBG Drinks"><em>contact@whibourgarn.com</em></a>
+		</p>
+	</footer>
+
+</div> <!--end of page-->
+
+
+<!--info page-->
+<!--contact page-->
+<div data-role="page" id="info" style="background-color: black">
+
+<header data-role="header" data-position="fixed">
+	<h1>Locale</h1>
+	<a href="#first">Home</a>
+</header>
+
+	<main>
+		<div style="text-align: center">
+		<h3>Our Alberta Family
+		<br>and Home to the <span>Calgary Flames</span></h3>
+		<img src="flamesc2.png" alt="calgary c" width="110" height="85"> 	
+		</div>
+		<br>
+		
+	</main>	
+
+	<footer>
+		<br>
+		<br>
+		
+		<!--to insert an email link into the text, code "mailto:" within an "a href" tag with the following appropriate email credentials-->
+		<!--to enable a default subject line to the user email, input "subject=" following the mailto: link-->
+		<p style="text-align: center">
+		Vodka Whiskey Tonic &copy; 2016<br>
+		Scotiabank Saddledrome, Studio 7<br>
+		Calgary, Alberta CA <br>
+		<a href="mailto:sandin7@hawaii.edu?subject= WBG Drinks"><em>contact@whibourgarn.com</em></a>
+		</p>
+	</footer>
+
+</div> <!--end of page-->
+
+
+<!--contact page-->
+<div data-role="page" id="contact" style="background-color: black">
+
+<header data-role="header" data-position="fixed">
+	<h1>Locale</h1>
+	<a href="#first">Home</a>
+</header>
+
+	<main>
+		<div style="text-align: center">
+		<h3>Our Alberta Family
+		<br>and Home to the <span>Calgary Flames</span></h3>
+		<img src="flamesc2.png" alt="calgary c" width="110" height="85"> 	
+		</div>
+		<br>
+		
+	</main>	
+
+	<footer>
+		<br>
+		<br>
+		
+		<!--to insert an email link into the text, code "mailto:" within an "a href" tag with the following appropriate email credentials-->
+		<!--to enable a default subject line to the user email, input "subject=" following the mailto: link-->
+		<p style="text-align: center">
+		Vodka Whiskey Tonic &copy; 2016<br>
+		Scotiabank Saddledrome, Studio 7<br>
+		Calgary, Alberta CA <br>
+		<a href="mailto:sandin7@hawaii.edu?subject= WBG Drinks"><em>contact@whibourgarn.com</em></a>
+		</p>
+	</footer>
+
+</div> <!--end of page-->
+</body>
+</html>
